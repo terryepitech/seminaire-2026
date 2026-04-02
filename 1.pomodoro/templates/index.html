@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ポモドーロタイマー</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+    <main class="app-shell">
+        <section class="timer-card">
+            <h1>ポモドーロタイマー</h1>
+            <div class="status-label">作業中</div>
+            <div class="clock-ring">
+                <div class="timer-value">25:00</div>
+            </div>
+            <div class="controls">
+                <button id="startButton" class="primary">開始</button>
+                <button id="resetButton" class="secondary">リセット</button>
+            </div>
+            <section class="progress-summary">
+                <h2>今日の進捗</h2>
+                <div class="progress-grid">
+                    <div>
+                        <span class="progress-number">0</span>
+                        <span class="progress-label">完了</span>
+                    </div>
+                    <div>
+                        <span class="progress-number">0時間0分</span>
+                        <span class="progress-label">集中時間</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script type="module" src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
